@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "dKgye5jhuDndvXtzDWAZN+JkQmvqKt2up7qN3mDotsU=",
+  "Source": "AspNet-CleanArchitecture.WebApi",
+  "BasePath": "_content/AspNet-CleanArchitecture.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,11 @@
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/bin/Debug/net9.0/AspNet-CleanArchitecture.Domain.deps.json
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/bin/Debug/net9.0/AspNet-CleanArchitecture.Domain.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/bin/Debug/net9.0/AspNet-CleanArchitecture.Domain.pdb
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.AssemblyInfoInputs.cache
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.AssemblyInfo.cs
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/refint/AspNet-CleanArchitecture.Domain.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.pdb
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/ref/AspNet-CleanArchitecture.Domain.dll

@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "AspNet-CleanArchitecture.WebApi/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.OpenApi": "9.0.0-preview.5.24306.11"
+        },
+        "runtime": {
+          "AspNet-CleanArchitecture.WebApi.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.OpenApi/9.0.0-preview.5.24306.11": {
+        "dependencies": {
+          "Microsoft.OpenApi": "1.6.13"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.30611"
+          }
+        }
+      },
+      "Microsoft.OpenApi/1.6.13": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
+            "assemblyVersion": "1.6.13.0",
+            "fileVersion": "1.6.13.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "AspNet-CleanArchitecture.WebApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.OpenApi/9.0.0-preview.5.24306.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JwAoj58PEzxtrXfWCqnFONAZoU8sapBtIhOkgAyF2s1rPs9p5oKIgcqd5BXJJ7rsl6PmZJjWvGpwtJ0s3B6Zow==",
+      "path": "microsoft.aspnetcore.openapi/9.0.0-preview.5.24306.11",
+      "hashPath": "microsoft.aspnetcore.openapi.9.0.0-preview.5.24306.11.nupkg.sha512"
+    },
+    "Microsoft.OpenApi/1.6.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ed1ecKcBp24032vhHBldXbpUJf11hO4+w7hj80RTDoRNA8eXtaunuK44WXauHZO95eYxTT1rWuOwByEXJ+vKQA==",
+      "path": "microsoft.openapi/1.6.13",
+      "hashPath": "microsoft.openapi.1.6.13.nupkg.sha512"
+    }
+  }
+}
