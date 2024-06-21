@@ -1,12 +1,17 @@
+
 using AspNet_CleanArchitecture.Domain;
+using AspNet_CleanArchitecture.Persistence.Models;
 using Bogus;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 
 
 namespace AspNet_CleanArchitecture.Persistence;
 
-public class AppDbContex  :  DbContext{
+public class AppDbContex  :  IdentityDbContext <AppUser>
+{
 
 public DbSet<Curso>? Cursos { get; set; }
 public DbSet<Instructor>?  Instructores { get; set; }
@@ -102,17 +107,127 @@ public DbSet<Calificacion>? Calificaciones { get; set; }
 
 
 
-        modelBuilder.Entity<Curso>().HasData(DataMaster().Item1);
-        modelBuilder.Entity<Precio>().HasData(DataMaster().Item2);
-        modelBuilder.Entity<Instructor>().HasData(DataMaster().Item3);
+        modelBuilder.Entity<Curso>().HasData(CargarDataMaster().Item1);
+        modelBuilder.Entity<Precio>().HasData(CargarDataMaster().Item2);
+        modelBuilder.Entity<Instructor>().HasData(CargarDataMaster().Item3);
 
 
-
+        CargarDataSeguridad (modelBuilder);
 
 
     }
 
-public Tuple<Curso[], Precio[], Instructor[]> DataMaster(){
+    private void CargarDataSeguridad(ModelBuilder modelBuilder){
+         var adminId =  Guid.NewGuid().ToString ();
+         var clienteId =  Guid.NewGuid().ToString ();
+
+         modelBuilder.Entity<IdentityRole>().HasData(
+            new IdentityRole{
+                Id=adminId,
+                Name = CustomRoles.ADMIN,
+                NormalizedName = CustomRoles.ADMIN                
+            }
+         );
+
+           modelBuilder.Entity<IdentityRole>().HasData(
+            new IdentityRole{
+                Id=clienteId,
+                Name = CustomRoles.CLIENT,
+                NormalizedName = CustomRoles.CLIENT                
+            }
+         );
+
+         modelBuilder.Entity<IdentityRoleClaim<string>>()
+         .HasData(
+            new  IdentityRoleClaim<string>{
+                Id=1,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.CURSO_READ,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=2,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.CURSO_UPDATE,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=3,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.CURSO_WRITE,
+                RoleId = adminId
+            },
+             new  IdentityRoleClaim<string>{
+                Id=4,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.CURSO_DELETE,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=5,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.INSTRUCTOR_CREATE,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=6,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.INSTRUCTOR_READ,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=7,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.INSTRUCTOR_UPDATE,
+                RoleId = adminId
+            },
+             new  IdentityRoleClaim<string>{
+                Id=8,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.COMENTARIO_RED,
+                RoleId = adminId
+            },
+             new  IdentityRoleClaim<string>{
+                Id=9,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.COMENTARIO_CREATE,
+                RoleId = adminId
+            },
+             new  IdentityRoleClaim<string>{
+                Id=10,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.COMENTARIO_DELETE,
+                RoleId = adminId
+            },
+            new  IdentityRoleClaim<string>{
+                Id=11,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.CURSO_READ,
+                RoleId = clienteId
+            },
+               new  IdentityRoleClaim<string>{
+                Id=12,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.INSTRUCTOR_READ,
+                RoleId = clienteId
+            },
+               new  IdentityRoleClaim<string>{
+                Id=13,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.COMENTARIO_RED,
+                RoleId = clienteId
+            },
+               new  IdentityRoleClaim<string>{
+                Id=14,
+                ClaimType= CumstomClaims.POLICIES,
+                ClaimValue  = PolicyMater.COMENTARIO_CREATE,
+                RoleId = clienteId
+            }
+         );
+
+    }
+
+private Tuple<Curso[], Precio[], Instructor[]> CargarDataMaster(){
 
 var cursos = new List<Curso>();
 var faker = new Faker();
@@ -151,6 +266,8 @@ for(int i = 1; i<10; i++)
 
     var instructores =  fakerIstructor.Generate(10);
 
+   
+
 
     
     return Tuple.Create(cursos.ToArray(),precios.ToArray(),instructores.ToArray());
@@ -158,3 +275,6 @@ for(int i = 1; i<10; i++)
 }
 
 }
+
+
+

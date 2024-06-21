@@ -1,3 +1,5 @@
+/*
+
 using AspNet_CleanArchitecture.Domain;
 using AspNet_CleanArchitecture.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -22,4 +24,4 @@ var cursos =  await context.Cursos!.ToListAsync();
 
 foreach (var curso in cursos){
     Console.WriteLine(curso.Titulo);
-}
+}*/
