@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "4b5vdY1m0K4jNfDPv5ILr3pfvtxmJVZKj0vphBAYhyY=",
+  "Source": "AspNet-CleanArchitecture.Application",
+  "BasePath": "_content/AspNet-CleanArchitecture.Application",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

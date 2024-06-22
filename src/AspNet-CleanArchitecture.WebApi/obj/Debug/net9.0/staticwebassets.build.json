@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "dKgye5jhuDndvXtzDWAZN+JkQmvqKt2up7qN3mDotsU=",
+  "Hash": "L+osU8UMrE705V2K2XMphyN7uh08TxVxUaDfdmuDsJ0=",
   "Source": "AspNet-CleanArchitecture.WebApi",
   "BasePath": "_content/AspNet-CleanArchitecture.WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Application/AspNet-CleanArchitecture.Application.csproj",
+      "Version": 2,
+      "Source": "AspNet-CleanArchitecture.Application",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": [],
   "Endpoints": []

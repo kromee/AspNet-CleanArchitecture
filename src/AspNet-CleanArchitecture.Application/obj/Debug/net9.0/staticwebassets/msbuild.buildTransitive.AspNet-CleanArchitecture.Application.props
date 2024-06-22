@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/AspNet-CleanArchitecture.Application.props" />
+</Project>

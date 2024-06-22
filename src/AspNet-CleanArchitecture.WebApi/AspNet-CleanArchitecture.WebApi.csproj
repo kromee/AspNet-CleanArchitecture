@@ -10,5 +10,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0-preview.5.24306.11" />
   </ItemGroup>
+    <ItemGroup>
+    <ProjectReference Include="..\AspNet-CleanArchitecture.Application\AspNet-CleanArchitecture.Application.csproj" />
+  </ItemGroup>
 
 </Project>

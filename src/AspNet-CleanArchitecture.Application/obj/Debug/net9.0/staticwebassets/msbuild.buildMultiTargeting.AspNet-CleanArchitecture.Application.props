@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/AspNet-CleanArchitecture.Application.props" />
+</Project>
