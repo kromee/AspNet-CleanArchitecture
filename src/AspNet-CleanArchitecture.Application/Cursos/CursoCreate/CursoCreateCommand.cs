@@ -10,9 +10,9 @@ public class CursoCreateCommand{
     public record CursoCreateCommandRequest(CursoCreateRequest  CursoCreateRequest): IRequest <Guid>;
     internal class CursoCreateCommandHandler : IRequestHandler<CursoCreateCommandRequest, Guid>
     {
-        private readonly AppDbContex _context;
+        private readonly AppDbContext _context;
 
-        public CursoCreateCommandHandler(AppDbContex context){
+        public CursoCreateCommandHandler(AppDbContext context){
             _context = context;
         }
     public async Task<Guid> Handle  (CursoCreateCommandRequest request, CancellationToken cancellationToken )
