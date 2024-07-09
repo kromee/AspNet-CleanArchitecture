@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet-CleanArchitecture.Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet-CleanArchitecture.Application", "src\AspNet-CleanArchitecture.Application\AspNet-CleanArchitecture.Application.csproj", "{0BB0961D-E491-47E7-8A6F-E70C8F6C0E8C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet-CleanArchitecture.Infraestructure", "src\AspNet-CleanArchitecture.Infraestructure\AspNet-CleanArchitecture.Infraestructure.csproj", "{C853681A-FFC0-46F1-8D64-EE566E69F068}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,11 +40,16 @@ Global
 		{0BB0961D-E491-47E7-8A6F-E70C8F6C0E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB0961D-E491-47E7-8A6F-E70C8F6C0E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB0961D-E491-47E7-8A6F-E70C8F6C0E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C853681A-FFC0-46F1-8D64-EE566E69F068}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C853681A-FFC0-46F1-8D64-EE566E69F068}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C853681A-FFC0-46F1-8D64-EE566E69F068}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C853681A-FFC0-46F1-8D64-EE566E69F068}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{118D02F4-6192-4981-9F97-639F3C234D95} = {CB1B0D12-85CC-4B8E-8E26-EA4C3107BB3E}
 		{C8C46C4D-6A15-415B-8C0F-12875155C3AE} = {CB1B0D12-85CC-4B8E-8E26-EA4C3107BB3E}
 		{C8F56580-C211-4FD2-8787-09E50C8F63D5} = {CB1B0D12-85CC-4B8E-8E26-EA4C3107BB3E}
 		{0BB0961D-E491-47E7-8A6F-E70C8F6C0E8C} = {CB1B0D12-85CC-4B8E-8E26-EA4C3107BB3E}
+		{C853681A-FFC0-46F1-8D64-EE566E69F068} = {CB1B0D12-85CC-4B8E-8E26-EA4C3107BB3E}
 	EndGlobalSection
 EndGlobal

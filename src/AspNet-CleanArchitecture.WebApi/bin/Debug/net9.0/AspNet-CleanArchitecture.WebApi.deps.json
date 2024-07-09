@@ -9,6 +9,7 @@
       "AspNet-CleanArchitecture.WebApi/1.0.0": {
         "dependencies": {
           "AspNet-CleanArchitecture.Application": "1.0.0",
+          "AspNet-CleanArchitecture.Infraestructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.0-preview.5.24306.11",
           "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.5.24306.3"
         },
@@ -32,6 +33,14 @@
           "lib/net6.0/Bogus.dll": {
             "assemblyVersion": "35.5.1.0",
             "fileVersion": "35.5.1.0"
+          }
+        }
+      },
+      "CsvHelper/33.0.1": {
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
+            "assemblyVersion": "33.0.0.0",
+            "fileVersion": "33.0.1.24"
           }
         }
       },
@@ -870,6 +879,15 @@
           "AspNet-CleanArchitecture.Domain.dll": {}
         }
       },
+      "AspNet-CleanArchitecture.Infraestructure/1.0.0": {
+        "dependencies": {
+          "AspNet-CleanArchitecture.Application": "1.0.0",
+          "CsvHelper": "33.0.1"
+        },
+        "runtime": {
+          "AspNet-CleanArchitecture.Infraestructure.dll": {}
+        }
+      },
       "AspNet-CleanArchitecture.Persistence/1.0.0": {
         "dependencies": {
           "AspNet-CleanArchitecture.Domain": "1.0.0",
@@ -903,6 +921,13 @@
       "sha512": "sha512-GBp2peww04szEJ0GlBlzCYilFDaSkL7Ja4m37YeTRjC/mgoiZnUuifmgUxVD/oLU2MC1uoXfQYK91doGp7Zkpg==",
       "path": "bogus/35.5.1",
       "hashPath": "bogus.35.5.1.nupkg.sha512"
+    },
+    "CsvHelper/33.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fev4lynklAU2A9GVMLtwarkwaanjSYB4wUqO2nOJX5hnzObORzUqVLe+bDYCUyIIRQM4o5Bsq3CcyJR89iMmEQ==",
+      "path": "csvhelper/33.0.1",
+      "hashPath": "csvhelper.33.0.1.nupkg.sha512"
     },
     "FluentValidation/11.5.1": {
       "type": "package",
@@ -1379,6 +1404,11 @@
       "sha512": ""
     },
     "AspNet-CleanArchitecture.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AspNet-CleanArchitecture.Infraestructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

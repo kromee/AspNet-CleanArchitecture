@@ -31,6 +31,19 @@
           }
         }
       },
+      "CsvHelper/33.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CsvHelper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FluentValidation/11.5.1": {
         "type": "package",
         "compile": {
@@ -1480,6 +1493,20 @@
           "bin/placeholder/AspNet-CleanArchitecture.Domain.dll": {}
         }
       },
+      "AspNet-CleanArchitecture.Infraestructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AspNet-CleanArchitecture.Application": "1.0.0",
+          "CsvHelper": "33.0.1"
+        },
+        "compile": {
+          "bin/placeholder/AspNet-CleanArchitecture.Infraestructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AspNet-CleanArchitecture.Infraestructure.dll": {}
+        }
+      },
       "AspNet-CleanArchitecture.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1532,6 +1559,34 @@
         "lib/netstandard1.3/Bogus.xml",
         "lib/netstandard2.0/Bogus.dll",
         "lib/netstandard2.0/Bogus.xml"
+      ]
+    },
+    "CsvHelper/33.0.1": {
+      "sha512": "fev4lynklAU2A9GVMLtwarkwaanjSYB4wUqO2nOJX5hnzObORzUqVLe+bDYCUyIIRQM4o5Bsq3CcyJR89iMmEQ==",
+      "type": "package",
+      "path": "csvhelper/33.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "csvhelper.33.0.1.nupkg.sha512",
+        "csvhelper.nuspec",
+        "lib/net462/CsvHelper.dll",
+        "lib/net462/CsvHelper.xml",
+        "lib/net47/CsvHelper.dll",
+        "lib/net47/CsvHelper.xml",
+        "lib/net48/CsvHelper.dll",
+        "lib/net48/CsvHelper.xml",
+        "lib/net6.0/CsvHelper.dll",
+        "lib/net6.0/CsvHelper.xml",
+        "lib/net7.0/CsvHelper.dll",
+        "lib/net7.0/CsvHelper.xml",
+        "lib/net8.0/CsvHelper.dll",
+        "lib/net8.0/CsvHelper.xml",
+        "lib/netstandard2.0/CsvHelper.dll",
+        "lib/netstandard2.0/CsvHelper.xml",
+        "lib/netstandard2.1/CsvHelper.dll",
+        "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
     "FluentValidation/11.5.1": {
@@ -3999,6 +4054,11 @@
       "path": "../AspNet-CleanArchitecture.Domain/AspNet-CleanArchitecture.Domain.csproj",
       "msbuildProject": "../AspNet-CleanArchitecture.Domain/AspNet-CleanArchitecture.Domain.csproj"
     },
+    "AspNet-CleanArchitecture.Infraestructure/1.0.0": {
+      "type": "project",
+      "path": "../AspNet-CleanArchitecture.Infraestructure/AspNet-CleanArchitecture.Infraestructure.csproj",
+      "msbuildProject": "../AspNet-CleanArchitecture.Infraestructure/AspNet-CleanArchitecture.Infraestructure.csproj"
+    },
     "AspNet-CleanArchitecture.Persistence/1.0.0": {
       "type": "project",
       "path": "../AspNet-CleanArchitecture.Persistence/AspNet-CleanArchitecture.Persistence.csproj",
@@ -4008,6 +4068,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "AspNet-CleanArchitecture.Application >= 1.0.0",
+      "AspNet-CleanArchitecture.Infraestructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.0-preview.5.24306.11",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0-preview.5.24306.3"
     ]
@@ -4039,6 +4100,9 @@
           "projectReferences": {
             "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Application/AspNet-CleanArchitecture.Application.csproj": {
               "projectPath": "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Application/AspNet-CleanArchitecture.Application.csproj"
+            },
+            "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Infraestructure/AspNet-CleanArchitecture.Infraestructure.csproj": {
+              "projectPath": "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Infraestructure/AspNet-CleanArchitecture.Infraestructure.csproj"
             }
           }
         }

@@ -1,7 +1,10 @@
 using AspNet_CleanArchitecture.Application;
+using AspNet_CleanArchitecture.Application.Interfaces;
+using AspNet_CleanArchitecture.Infraestructure.Reports;
 using AspNet_CleanArchitecture.Persistence;
 using AspNet_CleanArchitecture.Persistence.Models;
 using CleanArchitecture.WebApi.Extensions;
+using CleanArchitecture.WebApi.Middleware;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +18,9 @@ builder.Services.AddOpenApi();
 builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 
+builder.Services.AddScoped(typeof(IReportService<>), typeof(ReportService<>));
+
+
 builder.Services.AddControllers();
 
 builder.Services.AddIdentityCore<AppUser>(opt => {
@@ -25,12 +31,12 @@ builder.Services.AddIdentityCore<AppUser>(opt => {
 
 
 var app = builder.Build();
-
+app.UseMiddleware<ExceptionMiddleware>();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+if (app.Environment.IsDevelopment()){
     app.MapOpenApi();
+  
 }
 
 await app.SeedDataAuthentication();
