@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoCreate.CursoCreateCommand;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel.CursoReporteExcelQuery;
+using static AspNet_CleanArchitecture.Application.Cursos.GetCurso.GetCursoQuery;
 
 namespace CleanArchitecture.WebApi.Controllers;
 
@@ -26,6 +27,15 @@ public class CursoController : ControllerBase {
         var command = new CursoCreateCommandRequest(request);
        var resultado = await  _sender.Send(command);
        return Ok(resultado);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> CursoGet(Guid id, CancellationToken cancellationToken) { 
+        var query = new GetCursoQueryRequest{Id=id};
+        var resultado  = await _sender.Send(query, cancellationToken);
+        return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
+        
+
     }
 
     [HttpGet("reporte")]

@@ -1,3 +1,4 @@
+using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Cursos.CursoCreate;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -27,6 +28,9 @@ public static class DependencyInjection
          services.AddFluentValidationAutoValidation();
         
         services.AddValidatorsFromAssemblyContaining<CursoCreateCommand>();
+
+        services.AddAutoMapper(typeof(MappingProfile).Assembly);
+
 
 
 
