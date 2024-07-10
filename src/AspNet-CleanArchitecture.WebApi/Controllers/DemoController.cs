@@ -25,8 +25,6 @@ public DemoController(IConfiguration configiguration, IWebHostEnvironment enviro
     public IActionResult GetAmbiente (){
         var mensaje =  _configiguration.GetValue<string>("MiVariable");
         var ambiente = _environment.EnvironmentName;
-
         return Ok(new {Ambiente= ambiente, Mensaje = mensaje});
-        
     }
 }

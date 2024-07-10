@@ -9,7 +9,7 @@ using static AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel.Curso
 namespace CleanArchitecture.WebApi.Controllers;
 
 [ApiController]
-[Route("api/Cursos")]
+[Route("api/cursos")]
 public class CursoController : ControllerBase {
     private readonly ISender  _sender;
     public CursoController (ISender sender){
@@ -21,8 +21,8 @@ public class CursoController : ControllerBase {
      CursoCreateRequest request, 
     CancellationToken cancellationToken)
     {
-
         //throw new Exception("Excepcion es forzada solo para pruebas");
+        Console.WriteLine(request);
         var command = new CursoCreateCommandRequest(request);
        var resultado = await  _sender.Send(command);
        return Ok(resultado);

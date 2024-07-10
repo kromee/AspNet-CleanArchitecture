@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "j9EXdV2Gwb8=",
+  "dgSpecHash": "uvVKEyNhNF0=",
   "success": true,
   "projectFilePath": "/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Infraestructure/AspNet-CleanArchitecture.Infraestructure.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "/Users/eduardodominguez/.nuget/packages/fluentvalidation/11.5.1/fluentvalidation.11.5.1.nupkg.sha512",
     "/Users/eduardodominguez/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
     "/Users/eduardodominguez/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
-    "/Users/eduardodominguez/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
+    "/Users/eduardodominguez/.nuget/packages/mediatr/12.3.0/mediatr.12.3.0.nupkg.sha512",
     "/Users/eduardodominguez/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/eduardodominguez/.nuget/packages/microsoft.aspnetcore.cryptography.internal/9.0.0-preview.5.24306.11/microsoft.aspnetcore.cryptography.internal.9.0.0-preview.5.24306.11.nupkg.sha512",
     "/Users/eduardodominguez/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/9.0.0-preview.5.24306.11/microsoft.aspnetcore.cryptography.keyderivation.9.0.0-preview.5.24306.11.nupkg.sha512",

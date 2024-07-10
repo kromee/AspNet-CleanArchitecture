@@ -81,11 +81,11 @@
           }
         }
       },
-      "MediatR/12.1.1": {
+      "MediatR/12.3.0": {
         "type": "package",
         "dependencies": {
           "MediatR.Contracts": "[2.0.1, 3.0.0)",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0"
         },
         "compile": {
           "lib/net6.0/MediatR.dll": {
@@ -812,19 +812,20 @@
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
       ]
     },
-    "MediatR/12.1.1": {
-      "sha512": "1AbwzzeS6gn4NdcO6A9LfKS5TXXgAiUQM3J18dREHa7O7TrdCXJ5dNFeRBpzPZY7UWl5Kby+n9pWrPJe3SDiMA==",
+    "MediatR/12.3.0": {
+      "sha512": "DuXRw/qux2n7pTRPond4WK9XImO+30TZrGPCeOmjYIXDWokpjZQDFRsdZMoP0WqWU7inC4m0D+Zbu5dSc4z6NQ==",
       "type": "package",
-      "path": "mediatr/12.1.1",
+      "path": "mediatr/12.3.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
+        "README.md",
         "gradient_128x128.png",
         "lib/net6.0/MediatR.dll",
         "lib/net6.0/MediatR.xml",
         "lib/netstandard2.0/MediatR.dll",
         "lib/netstandard2.0/MediatR.xml",
-        "mediatr.12.1.1.nupkg.sha512",
+        "mediatr.12.3.0.nupkg.sha512",
         "mediatr.nuspec"
       ]
     },
@@ -1646,7 +1647,7 @@
       "AspNet-CleanArchitecture.Persistence >= 1.0.0",
       "AutoMapper >= 13.0.1",
       "FluentValidation.AspNetCore >= 11.3.0",
-      "MediatR >= 12.1.1"
+      "MediatR >= 12.3.0"
     ]
   },
   "packageFolders": {
@@ -1708,7 +1709,7 @@
           },
           "MediatR": {
             "target": "Package",
-            "version": "[12.1.1, )"
+            "version": "[12.3.0, )"
           }
         },
         "imports": [

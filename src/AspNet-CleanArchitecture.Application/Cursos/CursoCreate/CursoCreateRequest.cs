@@ -10,7 +10,7 @@ public class CursoCreateRequest{
     public  DateTime? FechaPublicacion { get; set; }
     public IFormFile? Foto { get; set; }
     public Guid? InstructorId { get; set; }
-    public Guid PrecioId { get; set; }
+    public Guid? PrecioId { get; set; }
 
 
 

@@ -60,7 +60,7 @@
             },
             "MediatR": {
               "target": "Package",
-              "version": "[12.1.1, )"
+              "version": "[12.3.0, )"
             }
           },
           "imports": [
