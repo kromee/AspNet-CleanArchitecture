@@ -187,6 +187,10 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.26.2, )"
+            },
             "CsvHelper": {
               "target": "Package",
               "version": "[33.0.1, )"

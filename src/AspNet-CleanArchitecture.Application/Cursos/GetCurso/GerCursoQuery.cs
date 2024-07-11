@@ -3,7 +3,7 @@
 using AspNet_CleanArchitecture.Application.Calificaciones.GetCalificaciones;
 using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Instructores.GetInstructores;
-using AspNet_CleanArchitecture.Application.Photos.GetPhoto;
+using AspNet_CleanArchitecture.Application.Photos.GetPhotos;
 using AspNet_CleanArchitecture.Application.Precios.GetPrecios;
 using AspNet_CleanArchitecture.Persistence;
 using AutoMapper;

@@ -163,3 +163,5 @@
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/AspNet-CleanArchitecture.Infraestructure.pdb
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/appsettings.Production.json
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/appsettings.Staging.json
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/CloudinaryDotNet.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Newtonsoft.Json.dll

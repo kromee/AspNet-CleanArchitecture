@@ -62,7 +62,7 @@ public DbSet<Calificacion>? Calificaciones { get; set; }
        .HasMany(b => b.Photos)
        .WithOne(b => b.Curso)
        .HasForeignKey(b=>b.CursoId)
-       .IsRequired()
+       //.IsRequired()
        .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<Curso>()
