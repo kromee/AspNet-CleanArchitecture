@@ -1,11 +1,13 @@
 using System.Threading.Tasks.Dataflow;
 using AspNet_CleanArchitecture.Application.Cursos.CursoCreate;
 using AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel;
+using AspNet_CleanArchitecture.Application.Cursos.GetCursos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoCreate.CursoCreateCommand;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel.CursoReporteExcelQuery;
 using static AspNet_CleanArchitecture.Application.Cursos.GetCurso.GetCursoQuery;
+using static AspNet_CleanArchitecture.Application.Cursos.GetCursos.GetCursosQuery;
 
 namespace CleanArchitecture.WebApi.Controllers;
 
@@ -34,8 +36,13 @@ public class CursoController : ControllerBase {
         var query = new GetCursoQueryRequest{Id=id};
         var resultado  = await _sender.Send(query, cancellationToken);
         return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
-        
+    }
 
+    [HttpGet]
+    public async Task<IActionResult> PaginationCursos([FromQuery] GetCursosRequest request, CancellationToken cancellationToken){
+                var query = new GetCursosQueryRequest{CursosRequest = request};
+              var resultado  = await _sender.Send(query, cancellationToken);
+                return resultado.IsSuccess ? Ok(resultado.Value) : NotFound();
     }
 
     [HttpGet("reporte")]
