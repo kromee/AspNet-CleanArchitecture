@@ -8,13 +8,14 @@ using MediatR;
 
 using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace AspNet_CleanArchitecture.Application.Cursos.CursoCreate;
 
 public class CursoCreateCommand{
     public record CursoCreateCommandRequest(CursoCreateRequest   cursoCreateRequest)
-    : IRequest<Guid>;
-    internal class CursoCreateCommandHandler : IRequestHandler<CursoCreateCommandRequest, Guid>
+    : IRequest<Result<Guid>>;
+    internal class CursoCreateCommandHandler : IRequestHandler<CursoCreateCommandRequest,Result< Guid>>
     {
         private readonly AppDbContext _context;
         private readonly IPhotoService _photoService;
@@ -23,7 +24,7 @@ public class CursoCreateCommand{
             _context = context;
             _photoService = photoService;
         }
-        public async Task<Guid> Handle  (CursoCreateCommandRequest request, CancellationToken cancellationToken )
+        public async Task<Result<Guid>> Handle  (CursoCreateCommandRequest request, CancellationToken cancellationToken )
             {
                 var curso = new Curso{
                 Id=Guid.NewGuid(),
@@ -49,10 +50,37 @@ public class CursoCreateCommand{
                 curso.Photos = new List<Photo>{ photo};
             }
 
-            _context.Add(curso);
-            await _context.SaveChangesAsync(cancellationToken);
 
-            return curso.Id;
+            if(request.cursoCreateRequest.InstructorId is not null)
+            {
+                var instructor =   _context.Instructores!
+                .FirstOrDefault(x => x.Id == request.cursoCreateRequest.InstructorId);
+
+                if(instructor is null)
+                {
+                    return Result<Guid>.Failure("No se encontro el instructor");
+                }
+
+                curso.Instructores = new List<Instructor> {instructor};
+            }
+
+            if(request.cursoCreateRequest.PrecioId is not null)    
+            {
+                var precio = await _context.Precios!
+                .FirstOrDefaultAsync(x => x.Id == request.cursoCreateRequest.PrecioId);
+                
+                if(precio is null)
+                {
+                    return Result<Guid>.Failure("No se encontro el precio");
+                }
+
+                curso.Precios = new List<Precio> {precio};
+            }
+            _context.Add(curso);
+            var resultado = await _context.SaveChangesAsync(cancellationToken) > 0;
+            return resultado 
+                        ? Result<Guid>.Success(curso.Id)
+                        : Result<Guid>.Failure("No se pudo insertar el curso");
 
             }
         }
