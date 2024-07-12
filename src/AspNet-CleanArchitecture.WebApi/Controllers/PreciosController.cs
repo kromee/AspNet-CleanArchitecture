@@ -1,3 +1,5 @@
+using System.Net;
+using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Precios.GetPrecios;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -16,7 +18,8 @@ public class PreciosController: ControllerBase{
     
     }
     [HttpGet]
-    public async Task<IActionResult> PaginationPrecio ( [FromQuery] GetPreciosRequest request, CancellationToken cancellationToken){
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PagedList<PrecioResponse>>> PaginationPrecio ( [FromQuery] GetPreciosRequest request, CancellationToken cancellationToken){
         var query = new GetPreciosQueryRequest{
             PreciosRequest = request
         };

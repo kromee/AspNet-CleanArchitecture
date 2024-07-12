@@ -1,5 +1,7 @@
 
+using System.Net;
 using AspNet_CleanArchitecture.Application.Calificaciones.GetCalificaciones;
+using AspNet_CleanArchitecture.Application.Core;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using static AspNet_CleanArchitecture.Application.Calificaciones.GetCalificaciones.GetCalificacionesQuery;
@@ -16,7 +18,8 @@ public class CalificacionesController: ControllerBase{
     }
 
     [HttpGet]
-    public async Task<IActionResult> PaginationCalificacion ([FromQuery] GetCalificacionesRequest request, CancellationToken cancellationToken){
+     [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PagedList<CalificacionResponse>>> PaginationCalificacion ([FromQuery] GetCalificacionesRequest request, CancellationToken cancellationToken){
 
         var query =  new GetCalificacionesQueryRequest{
             CalificacionesRequest = request
@@ -24,9 +27,6 @@ public class CalificacionesController: ControllerBase{
 
         var resultados = await _sender.Send(query, cancellationToken);
         return resultados.IsSuccess ? Ok(resultados.Value): NotFound();
-
-
-
     }
 
 

@@ -1,3 +1,5 @@
+using System.Net;
+using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Instructores.GetInstructores;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -15,7 +17,8 @@ public class InstructoresController : ControllerBase{
     }
 
     [HttpGet]
-    public async Task<IActionResult> PaginationInstructor([FromQuery] GetInstructoresRequest request, CancellationToken cancellationToken){
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<PagedList<InstructorResponse>>>PaginationInstructor([FromQuery] GetInstructoresRequest request, CancellationToken cancellationToken){
        var query = new GetInstructoresQueryRequest {
             InstructorRequest = request
         };

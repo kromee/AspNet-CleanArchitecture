@@ -1,8 +1,10 @@
+using System.Net;
 using System.Threading.Tasks.Dataflow;
 using AspNet_CleanArchitecture.Application.Core;
 using AspNet_CleanArchitecture.Application.Cursos.CursoCreate;
 using AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel;
 using AspNet_CleanArchitecture.Application.Cursos.CursoUpdate;
+using AspNet_CleanArchitecture.Application.Cursos.GetCurso;
 using AspNet_CleanArchitecture.Application.Cursos.GetCursos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +26,8 @@ public class CursoController : ControllerBase {
     }
 
     [HttpPost]
-    public async Task< ActionResult<Guid>> CursoCreate ([FromForm]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<Guid>> CursoCreate ([FromForm]
      CursoCreateRequest request, 
     CancellationToken cancellationToken)
     {
@@ -32,11 +35,13 @@ public class CursoController : ControllerBase {
         Console.WriteLine(request);
         var command = new CursoCreateCommandRequest(request);
        var resultado = await  _sender.Send(command);
-       return Ok(resultado);
+       //return Ok(resultado);
+        return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
     }
 
 
     [HttpPut("{id}")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Result<Guid>>> CursoUpdate([FromBody] CursoUpdateRequest   request, Guid id, CancellationToken cancellationToken){
 
         var command = new CursoUpdateCommandRequest(request, id);
@@ -49,16 +54,18 @@ public class CursoController : ControllerBase {
 
 
     [HttpDelete("{id}")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Unit>> CursoDelete(Guid id, CancellationToken cancellationToken){
 
             var command = new CursoDeleteCommandRequest(id);
             var resultado = await _sender.Send(command, cancellationToken);
-             return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
-        }
+             return resultado.IsSuccess ? Ok() : BadRequest();
+    }
 
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> CursoGet(Guid id, CancellationToken cancellationToken) { 
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<ActionResult<CursoResponse>> CursoGet(Guid id, CancellationToken cancellationToken) { 
         var query = new GetCursoQueryRequest{Id=id};
         var resultado  = await _sender.Send(query, cancellationToken);
         return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
@@ -77,10 +84,6 @@ public class CursoController : ControllerBase {
         var resultado = await _sender.Send(query, cancellationToken);
         byte[] excelBytes =  resultado.ToArray();
         return File(excelBytes, "text/csv", "cursos.csv");
-
-        
-
-
 
     }
 
