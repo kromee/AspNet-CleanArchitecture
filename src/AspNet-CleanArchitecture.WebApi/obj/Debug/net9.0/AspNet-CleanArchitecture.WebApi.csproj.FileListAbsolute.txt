@@ -165,3 +165,11 @@
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/appsettings.Staging.json
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/CloudinaryDotNet.dll
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll

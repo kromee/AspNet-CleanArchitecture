@@ -58,7 +58,7 @@ public class CursoCreateCommand{
 
                 if(instructor is null)
                 {
-                    return Result<Guid>.Failure("No se encontro el instructor");
+                    return Result<Guid>.Failure("No se encontró el instructor");
                 }
 
                 curso.Instructores = new List<Instructor> {instructor};
