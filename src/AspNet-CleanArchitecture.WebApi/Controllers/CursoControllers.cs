@@ -7,6 +7,7 @@ using AspNet_CleanArchitecture.Application.Cursos.CursoUpdate;
 using AspNet_CleanArchitecture.Application.Cursos.GetCurso;
 using AspNet_CleanArchitecture.Application.Cursos.GetCursos;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoCreate.CursoCreateCommand;
 using static AspNet_CleanArchitecture.Application.Cursos.CursoDelete.CursoDeleteCommand;
@@ -19,6 +20,7 @@ namespace CleanArchitecture.WebApi.Controllers;
 
 [ApiController]
 [Route("api/cursos")]
+[Authorize]
 public class CursoController : ControllerBase {
     private readonly ISender  _sender;
     public CursoController (ISender sender){

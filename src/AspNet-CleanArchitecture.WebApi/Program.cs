@@ -4,6 +4,7 @@ using AspNet_CleanArchitecture.Infraestructure.Reports;
 using AspNet_CleanArchitecture.Infrastructure.Photos;
 using AspNet_CleanArchitecture.Persistence;
 using AspNet_CleanArchitecture.Persistence.Models;
+using AspNet_CleanArchitecture.WebApi.Extensions;
 using CleanArchitecture.WebApi.Extensions;
 using CleanArchitecture.WebApi.Middleware;
 using Microsoft.AspNetCore.Identity;
@@ -34,6 +35,7 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddControllers();
 
+builder.Services.AddSwaggerDocumentation();
 
 
 
@@ -44,8 +46,10 @@ app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment()){
     app.MapOpenApi();
-  
 }
+
+app.useSwaggerDocumentation ();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

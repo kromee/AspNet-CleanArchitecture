@@ -173,3 +173,12 @@
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/System.Net.Http.Formatting.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/System.Web.Http.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/System.Web.Http.WebHost.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Microsoft.Web.Infrastructure.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Swashbuckle.Core.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/WebActivatorEx.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.WebApi/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
