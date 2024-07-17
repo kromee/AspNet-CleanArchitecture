@@ -145,86 +145,86 @@ public DbSet<Calificacion>? Calificaciones { get; set; }
          .HasData(
             new  IdentityRoleClaim<string>{
                 Id=1,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.CURSO_READ,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.CURSO_READ,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=2,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.CURSO_UPDATE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.CURSO_UPDATE,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=3,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.CURSO_WRITE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.CURSO_WRITE,
                 RoleId = adminId
             },
              new  IdentityRoleClaim<string>{
                 Id=4,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.CURSO_DELETE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.CURSO_DELETE,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=5,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.INSTRUCTOR_CREATE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.INSTRUCTOR_CREATE,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=6,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.INSTRUCTOR_READ,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.INSTRUCTOR_READ,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=7,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.INSTRUCTOR_UPDATE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.INSTRUCTOR_UPDATE,
                 RoleId = adminId
             },
              new  IdentityRoleClaim<string>{
                 Id=8,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.COMENTARIO_RED,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.COMENTARIO_READ,
                 RoleId = adminId
             },
              new  IdentityRoleClaim<string>{
                 Id=9,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.COMENTARIO_CREATE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.COMENTARIO_CREATE,
                 RoleId = adminId
             },
              new  IdentityRoleClaim<string>{
                 Id=10,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.COMENTARIO_DELETE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.COMENTARIO_DELETE,
                 RoleId = adminId
             },
             new  IdentityRoleClaim<string>{
                 Id=11,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.CURSO_READ,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.CURSO_READ,
                 RoleId = clienteId
             },
                new  IdentityRoleClaim<string>{
                 Id=12,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.INSTRUCTOR_READ,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.INSTRUCTOR_READ,
                 RoleId = clienteId
             },
                new  IdentityRoleClaim<string>{
                 Id=13,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.COMENTARIO_RED,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.COMENTARIO_READ,
                 RoleId = clienteId
             },
                new  IdentityRoleClaim<string>{
                 Id=14,
-                ClaimType= CumstomClaims.POLICIES,
-                ClaimValue  = PolicyMater.COMENTARIO_CREATE,
+                ClaimType= CustomClaims.POLICIES,
+                ClaimValue  = PolicyMaster.COMENTARIO_CREATE,
                 RoleId = clienteId
             }
          );

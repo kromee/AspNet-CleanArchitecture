@@ -350,12 +350,12 @@ namespace AspNet_CleanArchitecture.Persistence.Migrations
                     { 5, "POLICIES", "INSTRUCTOR_CREATE", "8750ab10-d440-439d-8863-c6800132e554" },
                     { 6, "POLICIES", "INSTRUCTOR_READ", "8750ab10-d440-439d-8863-c6800132e554" },
                     { 7, "POLICIES", "INSTRUCTOR_UPDATE", "8750ab10-d440-439d-8863-c6800132e554" },
-                    { 8, "POLICIES", "COMENTARIO_RED", "8750ab10-d440-439d-8863-c6800132e554" },
+                    { 8, "POLICIES", "COMENTARIO_READ", "8750ab10-d440-439d-8863-c6800132e554" },
                     { 9, "POLICIES", "COMENTARIO_CREATE", "8750ab10-d440-439d-8863-c6800132e554" },
                     { 10, "POLICIES", "COMENTARIO_DELETE", "8750ab10-d440-439d-8863-c6800132e554" },
                     { 11, "POLICIES", "CURSO_READ", "4c29a282-dc3e-40b6-9eff-486937104193" },
                     { 12, "POLICIES", "INSTRUCTOR_READ", "4c29a282-dc3e-40b6-9eff-486937104193" },
-                    { 13, "POLICIES", "COMENTARIO_RED", "4c29a282-dc3e-40b6-9eff-486937104193" },
+                    { 13, "POLICIES", "COMENTARIO_READ", "4c29a282-dc3e-40b6-9eff-486937104193" },
                     { 14, "POLICIES", "COMENTARIO_CREATE", "4c29a282-dc3e-40b6-9eff-486937104193" }
                 });
 

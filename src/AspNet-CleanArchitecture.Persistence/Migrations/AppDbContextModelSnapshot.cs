@@ -489,7 +489,7 @@ namespace AspNet_CleanArchitecture.Persistence.Migrations
                         {
                             Id = 8,
                             ClaimType = "POLICIES",
-                            ClaimValue = "COMENTARIO_RED",
+                            ClaimValue = "COMENTARIO_READ",
                             RoleId = "8750ab10-d440-439d-8863-c6800132e554"
                         },
                         new
@@ -524,7 +524,7 @@ namespace AspNet_CleanArchitecture.Persistence.Migrations
                         {
                             Id = 13,
                             ClaimType = "POLICIES",
-                            ClaimValue = "COMENTARIO_RED",
+                            ClaimValue = "COMENTARIO_READ",
                             RoleId = "4c29a282-dc3e-40b6-9eff-486937104193"
                         },
                         new

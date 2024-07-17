@@ -6,6 +6,7 @@ using AspNet_CleanArchitecture.Application.Cursos.CursoReporteExcel;
 using AspNet_CleanArchitecture.Application.Cursos.CursoUpdate;
 using AspNet_CleanArchitecture.Application.Cursos.GetCurso;
 using AspNet_CleanArchitecture.Application.Cursos.GetCursos;
+using AspNet_CleanArchitecture.Domain;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,16 +21,26 @@ namespace CleanArchitecture.WebApi.Controllers;
 
 [ApiController]
 [Route("api/cursos")]
-[Authorize]
 public class CursoController : ControllerBase {
     private readonly ISender  _sender;
     public CursoController (ISender sender){
         _sender = sender;
     }
 
+    [AllowAnonymous]
+    [HttpGet]
+    public async Task<IActionResult> PaginationCursos([FromQuery] GetCursosRequest request, CancellationToken cancellationToken){
+                var query = new GetCursosQueryRequest{CursosRequest = request};
+              var resultado  = await _sender.Send(query, cancellationToken);
+                return resultado.IsSuccess ? Ok(resultado.Value) : NotFound();
+    }
+
+
+
+    [Authorize(Policy = PolicyMaster.CURSO_WRITE)]
     [HttpPost]
     [ProducesResponseType((int)HttpStatusCode.OK)]
-    public async Task<ActionResult<Guid>> CursoCreate ([FromForm]
+    public async Task<ActionResult<Result<Guid>>> CursoCreate ([FromForm]
      CursoCreateRequest request, 
     CancellationToken cancellationToken)
     {
@@ -42,6 +53,7 @@ public class CursoController : ControllerBase {
     }
 
 
+    [Authorize(Policy=PolicyMaster.CURSO_UPDATE)]
     [HttpPut("{id}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Result<Guid>>> CursoUpdate([FromBody] CursoUpdateRequest   request, Guid id, CancellationToken cancellationToken){
@@ -54,7 +66,7 @@ public class CursoController : ControllerBase {
     }
 
 
-
+    [Authorize(Policy=PolicyMaster.CURSO_DELETE)]
     [HttpDelete("{id}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Unit>> CursoDelete(Guid id, CancellationToken cancellationToken){
@@ -65,6 +77,7 @@ public class CursoController : ControllerBase {
     }
 
 
+    [AllowAnonymous]
     [HttpGet("{id}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<CursoResponse>> CursoGet(Guid id, CancellationToken cancellationToken) { 
@@ -73,13 +86,10 @@ public class CursoController : ControllerBase {
         return resultado.IsSuccess ? Ok(resultado.Value) : BadRequest();
     }
 
-    [HttpGet]
-    public async Task<IActionResult> PaginationCursos([FromQuery] GetCursosRequest request, CancellationToken cancellationToken){
-                var query = new GetCursosQueryRequest{CursosRequest = request};
-              var resultado  = await _sender.Send(query, cancellationToken);
-                return resultado.IsSuccess ? Ok(resultado.Value) : NotFound();
-    }
 
+  
+
+    [AllowAnonymous]
     [HttpGet("reporte")]
     public async Task<ActionResult> ReporteCsv(CancellationToken cancellationToken){
         var query = new CursoReporteExcelQueryRequest();
@@ -90,8 +100,6 @@ public class CursoController : ControllerBase {
     }
 
 
-
-    
 
 
 }

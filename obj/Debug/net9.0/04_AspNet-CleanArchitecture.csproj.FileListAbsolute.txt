@@ -1,6 +1,0 @@
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.GeneratedMSBuildEditorConfig.editorconfig
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.AssemblyInfoInputs.cache
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.AssemblyInfo.cs
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.csproj.CoreCompileInputs.cache
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.RazorAssemblyInfo.cache
-/Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/obj/Debug/net9.0/04_AspNet-CleanArchitecture.RazorAssemblyInfo.cs

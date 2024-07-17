@@ -3,6 +3,7 @@ using System.Net;
 using AspNet_CleanArchitecture.Application.Calificaciones.GetCalificaciones;
 using AspNet_CleanArchitecture.Application.Core;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static AspNet_CleanArchitecture.Application.Calificaciones.GetCalificaciones.GetCalificacionesQuery;
 
@@ -17,6 +18,7 @@ public class CalificacionesController: ControllerBase{
         _sender = sender;
     }
 
+    [AllowAnonymous]
     [HttpGet]
      [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<PagedList<CalificacionResponse>>> PaginationCalificacion ([FromQuery] GetCalificacionesRequest request, CancellationToken cancellationToken){

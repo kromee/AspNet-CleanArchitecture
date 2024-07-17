@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AspNet-CleanArchitecture.Application</id>
+    <version>1.0.0</version>
+    <authors>AspNet-CleanArchitecture.Application</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net9.0">
+        <dependency id="AspNet-CleanArchitecture.Domain" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="AspNet-CleanArchitecture.Persistence" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="AutoMapper" version="13.0.1" exclude="Build,Analyzers" />
+        <dependency id="FluentValidation.AspNetCore" version="11.3.0" exclude="Build,Analyzers" />
+        <dependency id="MediatR" version="12.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net9.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Application\bin\Debug\net9.0\AspNet-CleanArchitecture.Application.dll" target="lib\net9.0\AspNet-CleanArchitecture.Application.dll" />
+  </files>
+</package>

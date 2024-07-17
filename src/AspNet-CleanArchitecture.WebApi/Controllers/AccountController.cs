@@ -1,7 +1,10 @@
 using System.Net;
 using AspNet_CleanArchitecture.Application.Accounts;
+using AspNet_CleanArchitecture.Application.Accounts.Login;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+
 using static AspNet_CleanArchitecture.Application.Accounts.Login.LoginCommand;
 
 namespace AspNet_CleanArchitecture.WebApi.Controllers;
@@ -16,6 +19,7 @@ public class AccountController: ControllerBase{
         _sender = sender;
     }
 
+    [AllowAnonymous]
     [HttpPost("login")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Profile>> Login( [FromBody] LoginRequest request, CancellationToken cancellationToken

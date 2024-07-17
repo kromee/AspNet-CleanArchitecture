@@ -9,3 +9,14 @@
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/refint/AspNet-CleanArchitecture.Domain.dll
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/AspNet-CleanArchitecture.Domain.pdb
 /Users/eduardodominguez/Desktop/Cursos/04_AspNet-CleanArchitecture/src/AspNet-CleanArchitecture.Domain/obj/Debug/net9.0/ref/AspNet-CleanArchitecture.Domain.dll
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\bin\Debug\net9.0\AspNet-CleanArchitecture.Domain.deps.json
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\bin\Debug\net9.0\AspNet-CleanArchitecture.Domain.dll
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\bin\Debug\net9.0\AspNet-CleanArchitecture.Domain.pdb
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.AssemblyInfoInputs.cache
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.AssemblyInfo.cs
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.csproj.CoreCompileInputs.cache
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.dll
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\refint\AspNet-CleanArchitecture.Domain.dll
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\AspNet-CleanArchitecture.Domain.pdb
+C:\per\sistemas\04_AspNet-CleanArchitecture\src\AspNet-CleanArchitecture.Domain\obj\Debug\net9.0\ref\AspNet-CleanArchitecture.Domain.dll

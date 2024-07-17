@@ -48,7 +48,7 @@ public class TokenService : ITokenService
         {
             if(policy is not null)
             {
-                claims.Add(new (CumstomClaims.POLICIES, policy));
+                claims.Add(new (CustomClaims.POLICIES, policy));
             }
         }
 
