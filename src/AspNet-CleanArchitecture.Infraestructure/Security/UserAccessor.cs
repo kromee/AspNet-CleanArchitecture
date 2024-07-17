@@ -18,4 +18,13 @@ public class UserAccessor : IUserAccessor
        return _httpContextAccessor
         .HttpContext!.User.FindFirstValue(ClaimTypes.Name)!;
     }
+
+
+    public string GetEmail()
+    {
+        return _httpContextAccessor
+        .HttpContext!.User.FindFirstValue(ClaimTypes.Email)!;
+    }
+
+    
 }
