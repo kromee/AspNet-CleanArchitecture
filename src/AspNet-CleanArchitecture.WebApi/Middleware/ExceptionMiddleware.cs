@@ -1,6 +1,9 @@
+
+
 using System.Net;
 using System.Text.Json;
 using AspNet_CleanArchitecture.Application.Core;
+using Newtonsoft.Json;
 
 namespace CleanArchitecture.WebApi.Middleware;
 
@@ -27,23 +30,33 @@ public class ExceptionMiddleware{
         }catch (Exception ex)
         {
             _logger.LogError(ex, ex.Message);
-            context.Response.ContentType  = "application/json";
-            context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            var response = _env.IsDevelopment() ? new AppException(
-                            context.Response.StatusCode, 
-                            ex.Message, 
-                            ex.StackTrace?.ToString ()
-            )
-            :new AppException(context.Response.StatusCode, "Internal Server Error"
-            );
-
-            var options = new JsonSerializerOptions{
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+            var response = ex switch
+            {
+                ValidationException validationException => new  AppException(
+                   StatusCodes.Status400BadRequest,
+                    "Error de validacion",
+                    /*string.Join(
+                        ",",
+                        validationException.Errors.Select(er => er.ErrorMessage)
+                    )*/
+                     JsonConvert.SerializeObject(validationException.Errors.ToArray())
+                ),
+                 _ => new AppException(
+                    context.Response.StatusCode,
+                    ex.Message,
+                    ex.StackTrace?.ToString()
+                )
+                
             };
-            var json = JsonSerializer.Serialize(response, options);
-
+             
+            
+            context.Response.StatusCode = response.StatusCode;
+            context.Response.ContentType = "application/json";
+            var json = JsonConvert.SerializeObject(response);
             await context.Response.WriteAsync(json);
+
+          
         }
 
     }

@@ -38,7 +38,9 @@ builder.Services.AddControllers();
 
 builder.Services.AddSwaggerDocumentation();
 
-
+builder.Services.AddCors(o=>o.AddPolicy("corsapp", builder=>{
+builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+})); 
 
 
 var app = builder.Build();
@@ -54,6 +56,8 @@ app.useSwaggerDocumentation ();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseCors("Corsapp");
+
 
 await app.SeedDataAuthentication();
 

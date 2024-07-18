@@ -8,7 +8,8 @@ namespace AspNet_CleanArchitecture.Application.Cursos.CursoUpdate;
 
 
 public class CursoUpdateCommand(){
-    public record CursoUpdateCommandRequest (CursoUpdateRequest CursoUpdateRequest,  Guid? CursoId): IRequest<Result<Guid>>;
+    public record CursoUpdateCommandRequest (CursoUpdateRequest CursoUpdateRequest,  Guid? CursoId): 
+    IRequest<Result<Guid>>, ICommandBase;
 
 
     internal class CursoUpdateCommandHandler : IRequestHandler<CursoUpdateCommandRequest, Result<Guid>>
